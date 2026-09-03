@@ -3,13 +3,13 @@ export const WORKSHOP_INFO = {
   subtitle: "Especialistas en Electrónica y Mecánica para turismos, y Electricidad para vehículos pesados",
   legalName: "Electromecánica Patiño S. Coop.",
   address: {
-    street: "Senda de los Garres, nº26",
+    street: "Senda de los Garres, nº86",
     locality: "Los Garres",
     city: "Murcia",
     zip: "30158",
     province: "Murcia",
-    fullAddress: "Senda de los Garres, nº26, 30158 Los Garres, Murcia",
-    googleMapsUrl: "https://maps.google.com/?q=Senda+de+los+Garres+26+30158+Los+Garres+Murcia"
+    fullAddress: "Senda de los Garres, nº86, 30158 Los Garres, Murcia",
+    googleMapsUrl: "https://maps.google.com/?q=Senda+de+los+Garres+86+30158+Los+Garres+Murcia"
   },
   phoneWhatsApp: "34652370216",
   phoneDisplayWhatsApp: "652 370 216",

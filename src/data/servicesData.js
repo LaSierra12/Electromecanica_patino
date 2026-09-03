@@ -24,6 +24,7 @@ export const OFFICIAL_SERVICES_LIST = [
   { name: "Aire acondicionado", category: "Climatización", desc: "Recarga de gas refrigerante y comprobación de climatización." },
   { name: "Circuito refrigeración", category: "Mecánica & Motor", desc: "Reparación de manguitos, termostato y bomba de refrigerante." },
   { name: "Cojinetes rueda", category: "Frenos & Suspensión", desc: "Sustitución de rodamientos de rueda por holgura o ruido." },
+  { name: "Transmisión", category: "Mecánica & Transmisión", desc: "Inspección, reparación y sustitución de transmisiones, palieres y fuelles." },
   { name: "Dirección", category: "Frenos & Suspensión", desc: "Revisión de cremallera, rótulas y alineación de dirección." },
   { name: "Embrague", category: "Mecánica & Transmisión", desc: "Sustitución de kit de embrague y volante bimasa." },
   { name: "Faros y señalización", category: "Electricidad & Electrónica", desc: "Regulación de faros, pulido y sustitución de lámparas." },

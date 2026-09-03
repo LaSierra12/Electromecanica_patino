@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { OFFICIAL_SERVICES_LIST } from '../data/servicesData';
-import { MessageSquare, Search, ChevronRight, Tag } from 'lucide-react';
+import { MessageSquare, Search, ChevronRight, Tag, ChevronDown, ChevronUp, Layers } from 'lucide-react';
 
 export default function ServicesCatalog({ onSelectService }) {
+  const INITIAL_VISIBLE_COUNT = 8;
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Todas");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const categories = ["Todas", ...new Set(OFFICIAL_SERVICES_LIST.map(s => s.category))];
 
@@ -14,6 +16,15 @@ export default function ServicesCatalog({ onSelectService }) {
                           service.desc.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Automatically show all results when searching or filtering by category,
+  // or slice to initial count when browsing the full default list.
+  const isFiltering = searchTerm.trim() !== "" || selectedCategory !== "Todas";
+  const displayedServices = isFiltering || isExpanded 
+    ? filteredServices 
+    : filteredServices.slice(0, INITIAL_VISIBLE_COUNT);
+
+  const remainingCount = filteredServices.length - INITIAL_VISIBLE_COUNT;
 
   return (
     <section id="servicios" className="py-10 bg-white border-b border-slate-200">
@@ -40,7 +51,10 @@ export default function ServicesCatalog({ onSelectService }) {
             {categories.map((cat, idx) => (
               <button
                 key={idx}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setIsExpanded(true); // Expand automatically when clicking a category
+                }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-colors ${
                   selectedCategory === cat
                     ? 'bg-sky-600 text-white shadow-sm'
@@ -59,7 +73,10 @@ export default function ServicesCatalog({ onSelectService }) {
               type="text"
               placeholder="Buscar servicio..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setIsExpanded(true);
+              }}
               className="w-full pl-9 pr-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-600 shadow-sm font-medium"
             />
           </div>
@@ -68,7 +85,7 @@ export default function ServicesCatalog({ onSelectService }) {
 
         {/* Compact List View */}
         <div className="bg-white rounded-xl border border-slate-200 divide-y divide-slate-200 overflow-hidden shadow-sm">
-          {filteredServices.map((service, idx) => (
+          {displayedServices.map((service, idx) => (
             <div
               key={idx}
               className="p-3 sm:p-3.5 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs"
@@ -96,7 +113,7 @@ export default function ServicesCatalog({ onSelectService }) {
               {/* Right Action Button */}
               <button
                 onClick={() => onSelectService(service.name)}
-                className="shrink-0 px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-600 text-slate-800 hover:text-white border border-slate-300 hover:border-emerald-600 font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                className="shrink-0 px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-600 text-slate-800 hover:text-white border border-slate-300 hover:border-emerald-600 font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm group"
               >
                 <MessageSquare className="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" />
                 <span>Pedir Presupuesto</span>
@@ -106,6 +123,29 @@ export default function ServicesCatalog({ onSelectService }) {
             </div>
           ))}
         </div>
+
+        {/* Load More / Collapse Button */}
+        {!isFiltering && filteredServices.length > INITIAL_VISIBLE_COUNT && (
+          <div className="text-center pt-2">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 font-extrabold text-xs border border-sky-200 shadow-sm transition-all hover:scale-[1.02]"
+            >
+              {isExpanded ? (
+                <>
+                  <span>Mostrar menos servicios</span>
+                  <ChevronUp className="w-4 h-4 text-sky-600" />
+                </>
+              ) : (
+                <>
+                  <Layers className="w-4 h-4 text-sky-600" />
+                  <span>Ver lista completa de servicios (+{remainingCount} más)</span>
+                  <ChevronDown className="w-4 h-4 text-sky-600" />
+                </>
+              )}
+            </button>
+          </div>
+        )}
 
         {filteredServices.length === 0 && (
           <div className="text-center py-8 text-slate-500 text-xs font-medium">

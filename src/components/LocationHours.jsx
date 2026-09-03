@@ -13,7 +13,7 @@ export default function LocationHours({ onOpenBooking }) {
             Ubicación & Contacto Directo
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-            Estamos en Senda de los Garres, nº26 (Murcia)
+            Estamos en Senda de los Garres, nº86 (Murcia)
           </h2>
         </div>
 
@@ -113,8 +113,8 @@ export default function LocationHours({ onOpenBooking }) {
           <div className="lg:col-span-7 h-full min-h-[350px]">
             <div className="w-full h-full min-h-[350px] rounded-xl bg-white border border-slate-200 overflow-hidden relative shadow-md">
               <iframe
-                title="Ubicación Electromecánica Patiño"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.748392182046!2d-1.1123!3d37.9542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6381f1d1d1d1d1%3A0x0!2sSenda+de+los+Garres%2C+26%2C+30158+Los+Garres%2C+Murcia!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                title="Ubicación Electromecánica Patiño S Coop"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.748392182046!2d-1.1123!3d37.9542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6381f1d1d1d1d1%3A0x0!2sSenda+de+los+Garres%2C+86%2C+30158+Los+Garres%2C+Murcia!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '350px' }}

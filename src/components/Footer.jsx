@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             
             <p className="text-slate-300 leading-relaxed max-w-md">
-              Especialistas en Electrónica y Mecánica para turismos, y Electricidad para vehículos pesados. Senda de los Garres, nº26, 30158 Los Garres, Murcia.
+              Especialistas en Electrónica y Mecánica para turismos, y Electricidad para vehículos pesados. Senda de los Garres, nº86, 30158 Los Garres, Murcia.
             </p>
 
             {/* Accreditations Image Logos in White Containers */}

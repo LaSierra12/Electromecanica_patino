@@ -46,7 +46,7 @@ export default function Hero({ onOpenBooking }) {
 
             {/* Subtitle with exact specialties */}
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl">
-              Taller especializado en <strong className="text-slate-900 font-bold">Electrónica y Mecánica</strong> general y en <strong className="text-sky-700 font-bold"> aires acondicionados.</strong>
+              Taller especializado en <strong className="text-slate-900 font-bold">Electrónica y Mecánica</strong> para turismos, y <strong className="text-sky-700 font-bold">Electricidad técnica</strong> para vehículos pesados.
             </p>
 
             {/* Highlights list */}
@@ -101,7 +101,7 @@ export default function Hero({ onOpenBooking }) {
               <div className="space-y-2.5 text-slate-700 font-medium pt-1">
                 <div className="flex items-center gap-2.5">
                   <MapPin className="w-4 h-4 text-sky-600 shrink-0" />
-                  <span>Senda de los Garres, nº26, 30158 Los Garres (Murcia)</span>
+                  <span>Senda de los Garres, nº86, 30158 Los Garres (Murcia)</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Clock className="w-4 h-4 text-amber-600 shrink-0" />

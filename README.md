@@ -12,7 +12,7 @@
 ## 📌 Datos Verídicos del Taller
 
 - **Razón Social:** Electromecánica Patiño S Coop
-- **Dirección:** Senda de los Garres, nº26, 30158 Los Garres (Murcia)
+- **Dirección:** Senda de los Garres, nº86, 30158 Los Garres (Murcia)
 - **Horario:** Lunes a Viernes de 07:00 a 16:00 h
 - **WhatsApp Directo:** [652 370 216](https://wa.me/34652370216)
 - **Teléfono Fijo:** [968 073 759](tel:34968073759)
@@ -37,8 +37,8 @@
    - Incluye campos específicos para **Matrícula**, Tipo de Vehículo (Turismo / Vehículo Pesado), Marca/Modelo/Año y detalles del problema.
    - Formatea el mensaje sin emoticonos, utilizando un esquema limpio con guiones `-`.
 
-3. **🛠️ Catálogo Compacto de Servicios (32+ servicios oficiales):**
-   - Buscador en tiempo real y filtrado dinámico por categorías.
+3. **🛠️ Catálogo Desplegable de Servicios (33+ servicios oficiales):**
+   - Buscador en tiempo real, filtrado dinámico y botón desplegable *"Ver lista completa de servicios"*.
    - Incluye precio transparente para la Diagnosis OBD (25 €).
 
 4. **🔄 Carrusel Infinito de Marcas (Marquee Carousel):**
@@ -107,7 +107,7 @@ ELETROMECANICA_PATINO/
 │   │   ├── Navbar.jsx       # Barra superior y navegación principal
 │   │   ├── Hero.jsx         # Portada principal con tarjetas y CTAs
 │   │   ├── WorkshopGallery.jsx # Carrusel de fotos del taller
-│   │   ├── ServicesCatalog.jsx # Listado compacto con buscador de servicios
+│   │   ├── ServicesCatalog.jsx # Listado compacto desplegable de servicios
 │   │   ├── BrandsSection.jsx   # Acreditaciones y carrusel infinito de logos
 │   │   ├── LocationHours.jsx   # Mapa Google Maps, datos y redes sociales
 │   │   ├── Footer.jsx          # Pie de página con créditos de desarrollo
@@ -115,7 +115,7 @@ ELETROMECANICA_PATINO/
 │   │   └── WhatsAppBookingModal.jsx # Formulario interactivo con campo Matrícula
 │   ├── data/
 │   │   ├── workshopData.js  # Información corporativa y horarios
-│   │   ├── servicesData.js  # Catálogo oficial de servicios (32+ ítems)
+│   │   ├── servicesData.js  # Catálogo oficial de servicios (33+ ítems)
 │   │   └── brandsData.js    # Lista e importaciones de marcas
 │   ├── App.jsx              # Estructura de la aplicación
 │   ├── main.jsx             # Punto de entrada de React
