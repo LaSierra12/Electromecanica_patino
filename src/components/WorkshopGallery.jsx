@@ -33,9 +33,7 @@ export default function WorkshopGallery() {
             <Camera className="w-3.5 h-3.5 text-sky-600" />
             Galería del Taller
           </span>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-            Nuestras Instalaciones
-          </h2>
+          
           {/*<p className="text-slate-600 text-xs">
             Imágenes de nuestro taller.
           </p>*/}

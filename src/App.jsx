@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import SpecialtiesScope from './components/SpecialtiesScope';
-import WorkshopGallery from './components/WorkshopGallery';
 import ServicesCatalog from './components/ServicesCatalog';
+import WorkshopGallery from './components/WorkshopGallery';
 import BrandsSection from './components/BrandsSection';
 import LocationHours from './components/LocationHours';
 import Footer from './components/Footer';
@@ -32,12 +31,11 @@ export default function App() {
       {/* Main Content */}
       <main className="flex-grow">
         <Hero onOpenBooking={() => handleOpenBooking()} />
-
-        {/* Sección de Especialidades (Comentada para futuro uso si fuera necesario) */}
-        {/* <SpecialtiesScope onOpenBooking={() => handleOpenBooking()} /> */}
-
-        <WorkshopGallery />
+        
+        {/* Servicios antes que Instalaciones */}
         <ServicesCatalog onSelectService={(serviceTitle) => handleOpenBooking(serviceTitle)} />
+        <WorkshopGallery />
+        
         <BrandsSection />
         <LocationHours onOpenBooking={() => handleOpenBooking()} />
       </main>

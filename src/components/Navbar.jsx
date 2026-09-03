@@ -48,11 +48,11 @@ export default function Navbar({ onOpenBooking }) {
             </div>
           </a>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links (Servicios antes que Instalaciones) */}
           <nav className="hidden md:flex items-center gap-5 font-semibold text-slate-700">
             <a href="#inicio" className="hover:text-sky-600 transition-colors">Inicio</a>
-            <a href="#instalaciones" className="hover:text-sky-600 transition-colors">Instalaciones</a>
             <a href="#servicios" className="hover:text-sky-600 transition-colors">Servicios</a>
+            <a href="#instalaciones" className="hover:text-sky-600 transition-colors">Instalaciones</a>
             <a href="#acreditaciones" className="hover:text-sky-600 transition-colors">Acreditaciones</a>
             <a href="#contacto" className="hover:text-sky-600 transition-colors">Ubicación</a>
           </nav>
@@ -100,8 +100,8 @@ export default function Navbar({ onOpenBooking }) {
       {mobileMenuOpen && (
         <div className="sm:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-2 text-xs">
           <a href="#inicio" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Inicio</a>
-          <a href="#instalaciones" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Instalaciones</a>
           <a href="#servicios" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Servicios</a>
+          <a href="#instalaciones" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Instalaciones</a>
           <a href="#acreditaciones" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Acreditaciones</a>
           <a href="#contacto" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Ubicación</a>
           

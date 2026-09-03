@@ -12,7 +12,7 @@ export default function ServicesCatalog() {
             Nuestros Servicios
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-            ELECTROMECÁNICA PATIÑO S.COOP.
+            Nuestros servicios
           </h2>
         </div>
 

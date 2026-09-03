@@ -50,8 +50,8 @@ export default function Footer() {
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Navegación</h4>
             <ul className="space-y-1 text-slate-300">
               <li><a href="#inicio" className="hover:text-sky-400 transition-colors">Inicio</a></li>
+              <li><a href="#servicios" className="hover:text-sky-400 transition-colors">Servicios</a></li>
               <li><a href="#instalaciones" className="hover:text-sky-400 transition-colors">Instalaciones</a></li>
-              <li><a href="#servicios" className="hover:text-sky-400 transition-colors">Catálogo de Servicios</a></li>
               <li><a href="#acreditaciones" className="hover:text-sky-400 transition-colors">Acreditaciones</a></li>
               <li><a href="#contacto" className="hover:text-sky-400 transition-colors">Ubicación</a></li>
             </ul>
