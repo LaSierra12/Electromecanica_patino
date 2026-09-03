@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, MessageSquare, Car, Truck, User, Phone as PhoneIcon, FileText, FileSpreadsheet } from 'lucide-react';
+import { X, Send, MessageSquare, User, FileSpreadsheet } from 'lucide-react';
 import { WORKSHOP_INFO } from '../data/workshopData';
 import { OFFICIAL_SERVICES_LIST } from '../data/servicesData';
 
 export default function WhatsAppBookingModal({ isOpen, onClose, initialService = "" }) {
-  const [vehicleType, setVehicleType] = useState("Turismo");
   const [selectedService, setSelectedService] = useState("");
   const [customService, setCustomService] = useState("");
   const [clientName, setClientName] = useState("");
@@ -28,9 +27,8 @@ export default function WhatsAppBookingModal({ isOpen, onClose, initialService =
       : selectedService || "Consulta General / Presupuesto";
 
     const lines = [
-      `Solicitud de Presupuesto - Electromecánica Patiño S Coop`,
+      `Solicitud de Presupuesto - ELECTROMECÁNICA PATIÑO S.COOP.`,
       `- Nombre: ${clientName.trim() || 'No especificado'}`,
-      `- Tipo de Vehículo: ${vehicleType}`,
       `- Matrícula: ${licensePlate.trim().toUpperCase() || 'No especificada'}`,
       `- Vehículo (Marca/Modelo/Año): ${vehicleDetails.trim() || 'No especificado'}`,
       `- Servicio / Reparación: ${serviceName}`,
@@ -60,7 +58,7 @@ export default function WhatsAppBookingModal({ isOpen, onClose, initialService =
             </div>
             <div>
               <h3 className="font-extrabold text-sm text-white">Solicitar Presupuesto WhatsApp</h3>
-              <p className="text-[10px] text-slate-300">Electromecánica Patiño S Coop</p>
+              <p className="text-[10px] text-slate-300">ELECTROMECÁNICA PATIÑO S.COOP.</p>
             </div>
           </div>
 
@@ -74,38 +72,6 @@ export default function WhatsAppBookingModal({ isOpen, onClose, initialService =
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-4 space-y-3 bg-white">
-          
-          {/* Vehicle Type Selector */}
-          <div className="space-y-1">
-            <label className="block text-[11px] font-bold text-slate-800">Tipo de Vehículo</label>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => setVehicleType("Turismo")}
-                className={`py-2 px-3 rounded-lg border text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-                  vehicleType === "Turismo"
-                    ? 'bg-sky-50 border-sky-600 text-sky-800 shadow-sm'
-                    : 'bg-slate-50 border-slate-300 text-slate-700 hover:bg-slate-100'
-                }`}
-              >
-                <Car className="w-4 h-4 text-sky-600" />
-                <span>Turismo</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setVehicleType("Vehículo Pesado")}
-                className={`py-2 px-3 rounded-lg border text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-                  vehicleType === "Vehículo Pesado"
-                    ? 'bg-emerald-50 border-emerald-600 text-emerald-800 shadow-sm'
-                    : 'bg-slate-50 border-slate-300 text-slate-700 hover:bg-slate-100'
-                }`}
-              >
-                <Truck className="w-4 h-4 text-emerald-600" />
-                <span>Vehículo Pesado</span>
-              </button>
-            </div>
-          </div>
 
           {/* Service Dropdown */}
           <div className="space-y-1">
@@ -118,7 +84,7 @@ export default function WhatsAppBookingModal({ isOpen, onClose, initialService =
               <option value="">-- Selecciona un servicio --</option>
               {OFFICIAL_SERVICES_LIST.map((serv, idx) => (
                 <option key={idx} value={serv.name}>
-                  {serv.name} ({serv.category})
+                  {serv.name}
                 </option>
               ))}
               <option value="Otro (Especificar)">Otro servicio (Especificar)</option>
@@ -179,7 +145,7 @@ export default function WhatsAppBookingModal({ isOpen, onClose, initialService =
             <label className="block text-[11px] font-bold text-slate-800">Marca / Modelo / Año (Opcional)</label>
             <input
               type="text"
-              placeholder="Ej. Seat Ibiza 2018 / Volvo FH"
+              placeholder="Ej. Seat Ibiza 2018 / Renault Megane"
               value={vehicleDetails}
               onChange={(e) => setVehicleDetails(e.target.value)}
               className="w-full p-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-sky-600 font-medium"

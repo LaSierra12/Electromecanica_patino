@@ -17,9 +17,7 @@ export default function BrandsSection() {
           <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 border border-amber-200">
             Acreditaciones & Entidades Oficiales
           </span>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-            Garantía, Respaldo Institucional y Redes de Confianza
-          </h2>
+          
         </div>
 
         {/* ATRAMUR & BlackTire Cards with Clean White Logo Containers */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Phone, MapPin, Clock, ShieldCheck, HeartHandshake, CheckCircle2, Zap } from 'lucide-react';
+import { MessageSquare, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, Award } from 'lucide-react';
 import { WORKSHOP_INFO } from '../data/workshopData';
 import logoImg from '../assets/logo/logo-electromecanica-patino.svg';
 import atramurImg from '../assets/acreditaciones/atramur-logo.png';
@@ -18,35 +18,23 @@ export default function Hero({ onOpenBooking }) {
           {/* Left Main Hero Text */}
           <div className="lg:col-span-7 space-y-5 text-left">
             
-            {/* Main Featured Large Image Box */}
+            {/* Main Featured Logo Box */}
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl border border-slate-200 flex items-center justify-center overflow-hidden transform hover:scale-[1.01] transition-transform">
               <img
                 src={logoImg}
-                alt="Electromecánica Patiño S Coop - Logo Principal"
+                alt="ELECTROMECÁNICA PATIÑO S.COOP. - Logo Principal"
                 className="w-full h-36 sm:h-44 object-contain"
               />
             </div>
 
-            {/* Value Badges */}
-            <div className="flex flex-wrap items-center gap-2 pt-1">
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
-                <ShieldCheck className="w-3.5 h-3.5 text-sky-600" />
-                Responsabilidad & Profesionalidad
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
-                <HeartHandshake className="w-3.5 h-3.5 text-amber-600" />
-                Trato Cercano y Personalizado
-              </span>
-            </div>
-
             {/* Main Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Electromecánica Patiño S Coop
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight uppercase">
+              ELECTROMECÁNICA PATIÑO S.COOP.
             </h1>
 
-            {/* Subtitle with exact specialties */}
+            {/* Clean Subtitle focusing on 25 years + Mechanics & Electronics */}
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl">
-              Taller especializado en <strong className="text-slate-900 font-bold">Electrónica y Mecánica</strong> para turismos, y <strong className="text-sky-700 font-bold">Electricidad técnica</strong> para vehículos pesados.
+              <strong className="text-slate-900 font-bold">Más de 25 años de experiencia</strong> en el sector automovilístico. Especialistas en <strong className="text-sky-700 font-bold">Mecánica y Electrónica</strong> del automóvil, ofreciendo un servicio rápido, eficaz y transparente.
             </p>
 
             {/* Highlights list */}
@@ -57,7 +45,7 @@ export default function Hero({ onOpenBooking }) {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Compromiso de calidad en cada reparación</span>
+                <span>Solución eficaz para cualquier avería de tu vehículo</span>
               </div>
             </div>
 
@@ -86,19 +74,14 @@ export default function Hero({ onOpenBooking }) {
           <div className="lg:col-span-5">
             <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-md space-y-4 text-xs">
               
-              {/* Experience Card Block */}
-              <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 space-y-2 text-xs text-slate-700">
-                <p className="leading-relaxed">
-                  <strong className="text-slate-900 font-extrabold">Más de 15 años de experiencia</strong> en el sector de la reparación de vehículos. Estamos en continua formación y siempre al día de las novedades en el mundo del automóvil.
-                </p>
-                <div className="flex items-center gap-2 pt-1 font-bold text-sky-800 text-xs border-t border-slate-200/80">
-                  <Zap className="w-4 h-4 text-amber-500 fill-amber-400 shrink-0" />
-                  <span>Reparamos tu vehículo de forma rápida y eficaz.</span>
-                </div>
+              {/* Motto highlight inside card */}
+              <div className="p-3.5 rounded-lg bg-sky-50 border border-sky-200 space-y-1 text-xs text-sky-900 font-extrabold flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-sky-600 shrink-0" />
+                <span>Garantía de Calidad, Compromiso y Profesionalidad</span>
               </div>
 
               {/* Address, Hours & Phones */}
-              <div className="space-y-2.5 text-slate-700 font-medium pt-1">
+              <div className="space-y-3 text-slate-700 font-medium pt-1">
                 <div className="flex items-center gap-2.5">
                   <MapPin className="w-4 h-4 text-sky-600 shrink-0" />
                   <span>Senda de los Garres, nº86, 30158 Los Garres (Murcia)</span>

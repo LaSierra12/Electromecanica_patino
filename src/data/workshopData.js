@@ -1,7 +1,7 @@
 export const WORKSHOP_INFO = {
-  name: "Electromecánica Patiño S Coop",
-  subtitle: "Especialistas en Electrónica y Mecánica para turismos, y Electricidad para vehículos pesados",
-  legalName: "Electromecánica Patiño S. Coop.",
+  name: "ELECTROMECÁNICA PATIÑO S.COOP.",
+  subtitle: "Más de 25 años de experiencia en el sector automovilístico. Especialistas en Mecánica y Electrónica del automóvil, ofreciendo un servicio rápido, eficaz y transparente.",
+  legalName: "Electromecánica Patiño S.Coop.",
   address: {
     street: "Senda de los Garres, nº86",
     locality: "Los Garres",
@@ -26,18 +26,18 @@ export const WORKSHOP_INFO = {
     obdDiagnosisRate: "25 €"
   },
   experience: {
-    years: 15,
-    title: "Más de 15 años de experiencia",
-    copy: "Más de 15 años de experiencia en el sector de la reparación de vehículos. Estamos en continua formación y siempre al día de las novedades en el mundo del automóvil.",
+    years: 25,
+    title: "Más de 25 años de experiencia",
+    copy: "Más de 25 años de experiencia en el sector automovilístico. Especialistas en Mecánica y Electrónica del automóvil.",
     mottoSpeed: "Reparamos tu vehículo de forma rápida y eficaz."
   },
   values: {
-    motto: "Responsabilidad, profesionalidad, trato cercano y personalizado.",
+    motto: "Calidad, compromiso y profesionalidad.",
     highlights: [
-      "Responsabilidad y profesionalidad garantizadas",
-      "Trato cercano y 100% personalizado",
-      "Experiencia comprobada en reparación multimarca",
-      "Transparencia con presupuesto previo por WhatsApp"
+      "Calidad, compromiso y profesionalidad en cada trabajo",
+      "Más de 25 años de experiencia comprobada",
+      "Especialistas en Mecánica y Electrónica",
+      "Presupuesto previo por WhatsApp sin compromiso"
     ]
   },
   acreditations: [

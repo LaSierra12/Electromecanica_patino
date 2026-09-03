@@ -1,6 +1,6 @@
 import React from 'react';
 import { WORKSHOP_INFO } from '../data/workshopData';
-import { Facebook, Instagram, Code } from 'lucide-react';
+import { Facebook, Instagram, Code, MapPin } from 'lucide-react';
 import logoImg from '../assets/logo/logo-electromecanica-patino.svg';
 import atramurImg from '../assets/acreditaciones/atramur-logo.png';
 import blacktireImg from '../assets/acreditaciones/blacktire-logo.svg';
@@ -14,19 +14,24 @@ export default function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           
-          {/* Brand info */}
+          {/* Brand info with Motto & Location */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-white p-1 flex items-center justify-center shadow-sm">
                 <img src={logoImg} alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-sm font-extrabold text-white tracking-tight">
-                ELECTROMECÁNICA <span className="text-sky-400">PATIÑO S COOP</span>
+                ELECTROMECÁNICA <span className="text-sky-400">PATIÑO S.COOP.</span>
               </span>
             </div>
             
-            <p className="text-slate-300 leading-relaxed max-w-md">
-              Especialistas en Electrónica y Mecánica para turismos, y Electricidad para vehículos pesados. Senda de los Garres, nº86, 30158 Los Garres, Murcia.
+            <p className="text-slate-300 leading-relaxed max-w-md font-semibold text-xs">
+              {WORKSHOP_INFO.values.motto}
+            </p>
+
+            <p className="text-sky-400 font-semibold text-xs flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 shrink-0 text-sky-400" />
+              <span>{WORKSHOP_INFO.address.fullAddress}</span>
             </p>
 
             {/* Accreditations Image Logos in White Containers */}
@@ -73,7 +78,7 @@ export default function Footer() {
 
         {/* Bottom Bar with Developer Credit & Contact */}
         <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] text-slate-400">
-          <p>© {currentYear} Electromecánica Patiño S Coop. Todos los derechos reservados.</p>
+          <p>© {currentYear} ELECTROMECÁNICA PATIÑO S.COOP. Todos los derechos reservados.</p>
           
           {/* Professional Developer Credit */}
           <p className="flex items-center gap-1.5 bg-slate-950 px-3 py-1 rounded-full border border-slate-800 text-slate-300">

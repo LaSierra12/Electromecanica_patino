@@ -1,35 +1,35 @@
-export const OFFICIAL_SERVICES_LIST = [
-  { name: "Diagnosis de avería OBD", category: "Electricidad & Electrónica", desc: "Lectura y borrado de código de averías mediante puerto de diagnosis OBD.", price: "25 €" },
-  { name: "Aceite motor", category: "Mantenimiento & Fluidos", desc: "Sustitución de aceite lubricante para la protección del motor." },
-  { name: "Filtro aire", category: "Mantenimiento & Fluidos", desc: "Reemplazo de filtro de aire para optimizar el rendimiento." },
-  { name: "Filtro aceite", category: "Mantenimiento & Fluidos", desc: "Sustitución del filtro de aceite para evitar desgaste interno." },
-  { name: "Filtro combustible", category: "Mantenimiento & Fluidos", desc: "Protección de inyectores y bomba de combustible." },
-  { name: "Filtro habitáculo", category: "Mantenimiento & Fluidos", desc: "Filtro antipolen para garantizar aire limpio en el interior." },
-  { name: "Aceite (cambio, diferencial, servofreno)", category: "Mantenimiento & Fluidos", desc: "Sustitución y nivelado de fluidos técnicos de transmisión y diferencial." },
-  { name: "Líquido de frenos", category: "Mantenimiento & Fluidos", desc: "Comprobación y sustitución de líquido del sistema de frenado." },
-  { name: "Limpiaparabrisas", category: "Mantenimiento & Fluidos", desc: "Sustitución de escobillas limpiaparabrisas." },
-  { name: "Líquido limpiaparabrisas", category: "Mantenimiento & Fluidos", desc: "Relleno con producto limpiador para óptima visibilidad." },
-  { name: "Anticongelante", category: "Mantenimiento & Fluidos", desc: "Comprobación y sustitución de líquido refrigerante/anticongelante." },
-  { name: "Batería", category: "Electricidad & Electrónica", desc: "Comprobación de carga, alternador y sustitución de batería." },
-  { name: "Neumáticos", category: "Neumáticos & Chasis", desc: "Sustitución, equilibrado y alineación de neumáticos (Red BlackTire)." },
-  { name: "Amortiguadores", category: "Frenos & Suspensión", desc: "Inspección y sustitución de amortiguadores." },
-  { name: "Pastillas / mordazas frenos", category: "Frenos & Suspensión", desc: "Revisión y sustitución de pastillas de freno." },
-  { name: "Discos / tambores frenos", category: "Frenos & Suspensión", desc: "Comprobación y sustitución de discos y tambores de freno." },
-  { name: "Sistema escape", category: "Mecánica & Escape", desc: "Reparación de colectores, catalizador y silencioso." },
-  { name: "Bujías", category: "Mecánica & Motor", desc: "Sustitución de bujías de encendido." },
-  { name: "Cables bujía", category: "Mecánica & Motor", desc: "Comprobación y sustitución de cables de encendido." },
-  { name: "Sistema inyección", category: "Electricidad & Electrónica", desc: "Diagnosis y comprobación del sistema de inyección." },
-  { name: "Correas", category: "Mecánica & Motor", desc: "Sustitución de correas de accesorios." },
-  { name: "Correa distribución", category: "Mecánica & Motor", desc: "Cambio de kit completo de correa de distribución." },
-  { name: "Aire acondicionado", category: "Climatización", desc: "Recarga de gas refrigerante y comprobación de climatización." },
-  { name: "Circuito refrigeración", category: "Mecánica & Motor", desc: "Reparación de manguitos, termostato y bomba de refrigerante." },
-  { name: "Cojinetes rueda", category: "Frenos & Suspensión", desc: "Sustitución de rodamientos de rueda por holgura o ruido." },
-  { name: "Transmisión", category: "Mecánica & Transmisión", desc: "Inspección, reparación y sustitución de transmisiones, palieres y fuelles." },
-  { name: "Dirección", category: "Frenos & Suspensión", desc: "Revisión de cremallera, rótulas y alineación de dirección." },
-  { name: "Embrague", category: "Mecánica & Transmisión", desc: "Sustitución de kit de embrague y volante bimasa." },
-  { name: "Faros y señalización", category: "Electricidad & Electrónica", desc: "Regulación de faros, pulido y sustitución de lámparas." },
-  { name: "Alternador / arranque", category: "Electricidad & Electrónica", desc: "Reparación y sustitución de alternador y motor de arranque." },
-  { name: "Pre-ITV", category: "Revisiones", desc: "Chequeo completo previo a la inspección oficial de la ITV." },
-  { name: "Chapa", category: "Carrocería", desc: "Reparación de abolladuras y ajuste de paneles de carrocería." },
-  { name: "Pintura", category: "Carrocería", desc: "Servicio de pintura y retoques para piezas de vehículos." }
+import iconElectronica from '../assets/iconos-servicios/electronica-electricidad.svg';
+import iconMecanica from '../assets/iconos-servicios/mecanica-general.svg';
+import iconAire from '../assets/iconos-servicios/aire-acondicionado.svg';
+import iconMultimedia from '../assets/iconos-servicios/radios-pantallas.svg';
+import iconBaterias from '../assets/iconos-servicios/baterias-arranque.svg';
+
+export const MINIMAL_SERVICES_LIST = [
+  {
+    id: 1,
+    name: "Electrónica y electricidad",
+    icon: iconElectronica
+  },
+  {
+    id: 2,
+    name: "Mecánica general",
+    icon: iconMecanica
+  },
+  {
+    id: 3,
+    name: "Aire acondicionado",
+    icon: iconAire
+  },
+  {
+    id: 4,
+    name: "Radio, pantallas, altavoces, sensores, cámaras, etc",
+    icon: iconMultimedia
+  },
+  {
+    id: 5,
+    name: "Arranques, alternadores y baterías",
+    icon: iconBaterias
+  }
 ];
+
+export const OFFICIAL_SERVICES_LIST = MINIMAL_SERVICES_LIST;

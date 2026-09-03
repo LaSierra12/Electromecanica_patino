@@ -36,11 +36,11 @@ export default function Navbar({ onOpenBooking }) {
           {/* Official Logo Image */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 p-1 flex items-center justify-center shadow-sm group-hover:border-sky-500 transition-colors">
-              <img src={logoImg} alt="Electromecánica Patiño S Coop Logo" className="w-full h-full object-contain" />
+              <img src={logoImg} alt="ELECTROMECÁNICA PATIÑO S.COOP. Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-extrabold tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
-                ELECTROMECÁNICA <span className="text-sky-600">PATIÑO S COOP</span>
+                ELECTROMECÁNICA <span className="text-sky-600">PATIÑO S.COOP.</span>
               </span>
               <span className="text-[10px] text-slate-500 font-medium -mt-0.5">
                 Los Garres · Murcia
@@ -48,10 +48,9 @@ export default function Navbar({ onOpenBooking }) {
             </div>
           </a>
 
-          {/* Desktop Nav Links (Without commented especialidades link) */}
+          {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center gap-5 font-semibold text-slate-700">
             <a href="#inicio" className="hover:text-sky-600 transition-colors">Inicio</a>
-            {/* <a href="#especialidades" className="hover:text-sky-600 transition-colors">Especialidades</a> */}
             <a href="#instalaciones" className="hover:text-sky-600 transition-colors">Instalaciones</a>
             <a href="#servicios" className="hover:text-sky-600 transition-colors">Servicios</a>
             <a href="#acreditaciones" className="hover:text-sky-600 transition-colors">Acreditaciones</a>
@@ -101,7 +100,6 @@ export default function Navbar({ onOpenBooking }) {
       {mobileMenuOpen && (
         <div className="sm:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-2 text-xs">
           <a href="#inicio" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Inicio</a>
-          {/* <a href="#especialidades" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Especialidades</a> */}
           <a href="#instalaciones" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Instalaciones</a>
           <a href="#servicios" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Servicios</a>
           <a href="#acreditaciones" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-slate-800 font-medium">Acreditaciones</a>
